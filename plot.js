@@ -15,7 +15,10 @@ function init() {
           .text(sample)
           .property("value", sample);
       });
-  })}
+  })
+    buildMetadata("940");
+    buildCharts("940");
+};
   
   init();
 
@@ -105,7 +108,6 @@ function buildCharts(id) {
       var gaugeTrace = {
           type: "indicator",
           mode:"gauge",
-          value: gaugeData,
           gauge:{
             axis: {
               range: [0, 9],
@@ -123,7 +125,7 @@ function buildCharts(id) {
                     {range: [8,9], color:"#004c6d"}
                     ],
                     threshold: {
-                      line: { color: "gray", width: 4 },
+                      line: { color: "black", width: 4 },
                       thickness: 1,
                       value: gaugeData
                     }
