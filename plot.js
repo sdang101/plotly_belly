@@ -73,7 +73,7 @@ function buildCharts(id) {
       // Bar Chart 
       Plotly.newPlot("bar", [barTrace], barLayout);
 
-      //------------------------------------
+  
       var bubbleXdata = sampleResult.otu_ids;
       var bubbleYdata = sampleResult.sample_values;
       var bubbleHover = sampleResult.otu_labels;
